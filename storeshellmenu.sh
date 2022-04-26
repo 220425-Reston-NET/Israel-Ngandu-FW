@@ -12,8 +12,7 @@ do
 echo "Welcome to our store"
 echo "How can we help you today?"
 echo "Enter 1 for products list"
-echo "Enter 2 to to add to cart"
-echo "Enter 3 to checkout"
+echo "Enter 2 to checkout"
 
 read answer
 if [ "$answer" == "1" ]
@@ -43,7 +42,7 @@ then
 fi
 
 
-elif [ "$answer" == "3" ]
+elif [ "$answer" == "2" ]
 then
         echo "would you like to checkout? This is your total $total"
        
