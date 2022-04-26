@@ -19,9 +19,8 @@ read answer
 if [ "$answer" == "1" ]
 then
     echo "Bread, Milk, Candy, Cookies, Soda"
-read item
     read answer
-elif [ "$answer" == "Bread" ]
+if [ "$answer" == "Bread" ]
 then
 	echo "Bread is $Bread"
         total=$(($total+$Bread))
@@ -41,15 +40,19 @@ elif [ "$answer" == "Soda" ]
 then
 	echo "Soda is $Soda"
         total=$(($total+$Soda))
+fi
 
-elif [ "$answer" == "Checkout" ]
+
+elif [ "$answer" == "3" ]
+then
         echo "would you like to checkout? This is your total $total"
-then 
+       
         repeat="false"
 else
         echo "This item is not available, please choose from list provided"
 
 fi
+
 
 done
 

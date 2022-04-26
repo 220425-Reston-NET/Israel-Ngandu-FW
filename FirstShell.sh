@@ -82,12 +82,12 @@ repeat="true"
 
 while [ "$repeat" == "true" ]
 do
-echo "Welcome to shell scripting"
-echo "What do you want to do  today?"
-echo "enter 1 for adding  two numbers?"
-echo "enter 2 to exit"
+        echo "Welcome to shell scripting"
+        echo "What do you want to do  today?"
+        echo "enter 1 for adding  two numbers?"
+        echo "enter 2 to exit"
 
-read answer
+        read answer
 if [ "$answer" == "1" ]
 then
         echo "Give me number 1"
