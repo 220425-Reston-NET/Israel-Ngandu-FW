@@ -1,11 +1,11 @@
 repeat="true"
 item="Bread, Milk, Candy, Cookies, Soda"
-total="0"
 Bread="3"
 Milk="2"
 Candy="1"
 Cookies="2"
 Soda="3"
+total="0"
 
 while [ "$repeat" == "true" ]
 do
@@ -42,9 +42,10 @@ then
 	echo "Soda is $Soda"
         total=$(($total+$Soda))
 
-elif [ "$answer" == "2" ]
-then
-        echo "would you like to checkout this item?"
+elif [ "$answer" == "Checkout" ]
+        echo "would you like to checkout? This is your total $total"
+then 
+        repeat="false"
 else
         echo "This item is not available, please choose from list provided"
 
