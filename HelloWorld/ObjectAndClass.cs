@@ -5,8 +5,11 @@ public class Car
     //This is a field
     //It is used to store information or define the current state of the object
     //By default, fields should all be private
+    //private means that only the class itself has access to it
     private string _color;
+    //string is used for words/sentences
     private string _owner;
+    //int is used for whole numbers
     private int _fuel;
     private int _gallonPerMile;
 
@@ -35,6 +38,7 @@ public class Car
 
     //This is a constructor
     //It is a special method that will run whenever you create an object
+    //Mostly used to instantiate/set value to your fields or property
     public Car()
     {
         _color = "Blue";
@@ -43,26 +47,29 @@ public class Car
         _owner = "Stephen";
     }
 
+    //You can have more than 1 constructor and the parameter is used to pass information and change the data of the field/property
     public Car(string p_owner)
     {
         _owner = p_owner;
     }
 
-    //This is Property
+    //This is a Property
     //Gives us the flexibility to check that the data being stored is correct, let only certain things access data, make things read or write only
     public string Owner
     {
         //get keyword is this is how the data is going to be shared
-        get { return _owner + " is the owner of this car."; }
+        get { return _owner; }
 
         //set keyword is how you change the data that is being stored
-        set { _owner = value + " Owner"; }
+        set { _owner = value; }
     }
 
     //Fuel can only hold numbers from 0 to 100
     public int Fuel
     {
         get { return _fuel; }
+
+        //We changed the way data is stored by adding a constraint that only 0 to 100 can be stored in this field
         set
         {
             if (value <= 100 && value >= 0)
@@ -76,4 +83,9 @@ public class Car
             }
         }
     }
+
+    //You can make properties that will act like fields by formatting your property to look like this
+    //adding the private keyword next to get will make the property set only
+    //adding the private keyword next to set will make the property get only
+    public string Brand { get; set; }
 }
